@@ -1,24 +1,26 @@
-#ifndef MAIN_H
+#include "main.h"
 		
-#define MAIN_H
+#include <unistd.h>
 		
-
+/**
 		
-char *create_array(unsigned int size, char c);
+ * _putchar - writes the character c to stdout
 		
-int _putchar(char c);
+ * @c: The character to print
 		
-char *_strdup(char *str);
+ *
 		
-char *str_concat(char *s1, char *s2);
+ * Return: On success 1.
 		
-int **alloc_grid(int width, int height);
+ * On error, -1 is returned, and errno is set appropriately.
 		
-void free_grid(int **grid, int height);
+ */
 		
-char *argstostr(int ac, char **av);
+int _putchar(char c)
 		
-
+{
 		
-#endif
+	return (write(1, &c, 1));
+		
+}
 
